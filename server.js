@@ -3,13 +3,13 @@ const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const app = express()
-PORT = 3003
+const PORT = 3003
 
 //middleware
 
 app.use(express.json())
 
-const whitelist = ['http://localhost:3000']
+const whitelist = ['http://localhost:3000', 'https://enigmatic-mountain-68507.herokuapp.com']
 const corsOptions = {
     origin: function (origin, callback){
         if(whitelist){
@@ -19,7 +19,7 @@ const corsOptions = {
         }
     }
 }
-// app.use(cors(corsOptions))
+app.use(cors(corsOptions))
 
 mongoose.connection.on('error', err =>
 console.log(err.message + 'is Mongo not running?'))
