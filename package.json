@@ -1,7 +1,7 @@
 {
   "name": "shop-back-end",
   "engines": {
-    "node": "10.11.0",
+    "node": "13.8.0",
     "npm": "6.14.2"
   },
   "version": "1.0.0",
