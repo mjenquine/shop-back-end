@@ -13,6 +13,10 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "mongoose": "^5.9.4"
+    "mongoose": "^5.9.4",
+    "engines": {
+      "node": "13.8.0",
+      "npm": "6.14.2"
+    }
   }
 }
