@@ -1,5 +1,9 @@
 {
   "name": "shop-back-end",
+  "engines": {
+    "node": "10.11.0",
+    "npm": "6.14.2"
+  },
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -13,10 +17,6 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "mongoose": "^5.9.4",
-    "engines": {
-      "node": "13.8.0",
-      "npm": "6.14.2"
-    }
+    "mongoose": "^5.9.4"
   }
 }
