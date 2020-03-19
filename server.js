@@ -3,7 +3,8 @@ const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const app = express()
-const PORT = 3003
+const PORT = process.env.PORT || 3003
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/shop'
 
 //middleware
 
@@ -26,7 +27,7 @@ console.log(err.message + 'is Mongo not running?'))
 mongoose.connection.on('disconnected', () => {
         console.log('mongo disconnected');
 })
-mongoose.connect('mongodb://localhost:27017/shop', { useUnifiedTopology: true, useNewUrlParser: true})
+mongoose.connect(mongoURI, { useUnifiedTopology: true, useNewUrlParser: true})
 mongoose.connection.once('open', () => {
     console.log('Mongoose is currently 🎊🎊 POPPING');
 })
