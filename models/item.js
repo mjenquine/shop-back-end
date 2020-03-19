@@ -5,7 +5,8 @@ const itemSchema = mongoose.Schema({
     price: {type: String},
     description: {type: String},
     quantity: {type: Number, default: 0},
-    img: {type: String}
+    img: {type: String},
+    inCart: {type: Boolean, default: false}
 })
 
 module.exports = mongoose.model('Item', itemSchema)
